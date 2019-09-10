@@ -16,11 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from monSite.views import home_page_view, home_page_view_with_render, form
+from monSite.views import home_page_view, home_page_view_with_render #, form
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('',home_page_view,name='home'),
-    path('home_page', home_page_view_with_render, name='home_render'),
-    path('form/', form, name='form')
+    #path('admin/', admin.site.urls),
+    path('',home_page_view_with_render,name='home'),
+    #path('home_page', home_page_view_with_render, name='home_render'),
+    #path('form/', form, name='form')
 ]
